@@ -1,0 +1,44 @@
+{
+    "meta": {
+        "label": "Mass edit column descriptions",
+        "description": "Edit column descriptions across multiple datasets",
+        "icon": "icon-edit"
+    },
+
+    "impersonate": true,
+
+    "params": [
+         {
+            "name": "all_datasets",
+            "label": "All datasets",
+            "type": "BOOLEAN",
+            "description": "Apply to all datasets",
+            "mandatory": true
+        },
+        {
+            "name": "dataset_names",
+            "label": "Dataset names",
+            "type": "TEXTAREA",
+            "description": "One per line",
+            "mandatory": true,
+            "visibilityCondition": "!model.all_datasets"
+        },
+        {
+            "name": "descriptions",
+            "label": "Descriptions to set",
+            "type": "TEXTAREA",
+            "defaultValue": "{\"column1\": \"Description of c1\", \"column2\": \"Description of c2\"}",
+            "description": "A JSON object, with one key per column. The value is the new description to set"
+        },
+        {
+            "name": "override",
+            "label": "Override existing descriptions",
+            "type": "BOOLEAN",
+            "description": "If checked, new description will be set even if it exists. If unchecked, new description will only be set if there was none"
+        }
+    ],
+    "permissions": ["WRITE_CONF"],
+
+    "resultType": "NONE"
+
+}

@@ -1,0 +1,14 @@
+{
+    "id": "mass-edit-column-descriptions",
+    "version": "0.0.1",
+    "meta": {
+        "label": "Mass edit column descriptions",
+        "description": "",
+
+        "author": "Dataiku (Clément Stenac)",
+        "icon": "icon-edit",
+        "tags": ["Governance"],
+        "url": "https://github.com/dataiku/dss-plugin-mass-edit-column-descriptions",
+        "licenseInfo": "Apache Software License"
+    }
+}
